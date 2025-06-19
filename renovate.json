@@ -30,6 +30,13 @@
         "custom.curl"
       ],
       "extractVersion": "/iframe-(?<version>\\d+.\\d+)\\.min\\.js$"
+    },
+    {
+      "matchDatasources": [
+        "custom.curl"
+      ],
+      "matchUpdateTypes": ["digest"],
+      "digestOneAndOnly": true
     }
   ]
 }
