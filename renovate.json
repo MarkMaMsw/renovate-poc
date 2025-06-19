@@ -12,22 +12,22 @@
       "matchStrings": [
         "\"version\":\\s*\"(?<currentValue>.*?)\""
       ],
-      "depNameTemplate": "spreedly-version",
-      "datasourceTemplate": "custom.spreedly-version"
+      "depNameTemplate": "curl",
+      "datasourceTemplate": "custom.curl"
     }
   ],
   "customDatasources": {
-    "spreedly-version": {
-      "defaultRegistryUrlTemplate": "https://developer.spreedly.com/docs/iframe-integrity-hashes#iframe-active-versions",
+    "curl": {
+      "defaultRegistryUrlTemplate": "https://curl.se/download.html",
       "format": "html"
     }
   },
   "packageRules": [
     {
       "matchDatasources": [
-        "custom.spreedly-version"
+        "custom.curl"
       ],
-      "extractVersion": "^\\<td\\>(?<version>\\d+\\.\\d+)\\s*\\<\\/td\\>$"
+      "extractVersion": "/curl-(?<version>.+)\\.tar\\.gz$"
     }
   ]
 }
