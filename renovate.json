@@ -10,10 +10,9 @@
         "^spreedly\\.json$"
       ],
       "matchStrings": [
-        "\"version\":\\s*\"(?<currentValue>.*?)\"",
-        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\""
+        "\"version\":\\s*\"(?<currentValue>.*?)\""
       ],
-      "depNameTemplate": "spreedly-iframe",
+      "depNameTemplate": "spreedly-version",
       "datasourceTemplate": "custom.spreedly-version"
     }
   ],
@@ -28,7 +27,7 @@
       "matchDatasources": [
         "custom.spreedly-version"
       ],
-      "extractVersion": "^(?<version>\\d+\\.\\d+)"
+      "extractVersion": "^\\<td\\>(?<version>\\d+\\.\\d+)\\s*\\<\\/td\\>$"
     }
   ]
 }
