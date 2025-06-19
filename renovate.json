@@ -11,15 +11,14 @@
       ],
       "matchStrings": [
         "\"version\":\\s*\"(?<currentValue>.*?)\"",
-        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\"",
-        "\"sri\":\\s*\"(?<currentDigest>.*?)\""
+        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\""
       ],
-      "depNameTemplate": "curl",
-      "datasourceTemplate": "custom.curl"
+      "depNameTemplate": "spreedly-iframe",
+      "datasourceTemplate": "custom.spreedly-iframe"
     }
   ],
   "customDatasources": {
-    "curl": {
+    "spreedly-iframe": {
       "defaultRegistryUrlTemplate": "https://developer.spreedly.com/docs/iframe-integrity-hashes#iframe-active-versions",
       "format": "html"
     }
@@ -27,16 +26,9 @@
   "packageRules": [
     {
       "matchDatasources": [
-        "custom.curl"
+        "custom.spreedly-iframe"
       ],
       "extractVersion": "/iframe-(?<version>\\d+.\\d+)\\.min\\.js$"
-    },
-    {
-      "matchDatasources": [
-        "custom.curl"
-      ],
-      "matchUpdateTypes": ["digest"],
-      "digestOneAndOnly": true
     }
   ]
 }
