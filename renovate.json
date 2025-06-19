@@ -2,5 +2,33 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^spreedly\\.json$"
+      ],
+      "matchStrings": [
+        "\"version\":\\s*\"(?<currentValue>.*?)\"",
+        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\""
+      ],
+      "depNameTemplate": "spreedly-iframe",
+      "datasourceTemplate": "custom.spreedly-version"
+    }
+  ],
+  "customDatasources": {
+    "spreedly-version": {
+      "defaultRegistryUrlTemplate": "https://developer.spreedly.com/docs/iframe-integrity-hashes#iframe-active-versions",
+      "format": "html"
+    }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "custom.spreedly-version"
+      ],
+      "extractVersion": "^href=\"https://core\\.spreedly\\.com/iframe/iframe-(?<version>\\d+\\.\\d+)\\.min\\.js\"$"
+    }
   ]
 }
