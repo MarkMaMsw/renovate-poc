@@ -28,7 +28,7 @@
       "matchDatasources": [
         "custom.spreedly-version"
       ],
-      "extractVersion": "^href=\"https://core\\.spreedly\\.com/iframe/iframe-(?<version>\\d+\\.\\d+)\\.min\\.js\"$"
+      "extractVersion": "^(?<version>v\\d+\\.\\d+)"
     }
   ]
 }
