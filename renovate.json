@@ -28,7 +28,7 @@
       "matchDatasources": [
         "custom.spreedly-version"
       ],
-      "extractVersion": "^(?<version>v\\d+\\.\\d+)"
+      "extractVersion": "^(?<version>\\d+\\.\\d+)"
     }
   ]
 }
