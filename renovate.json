@@ -10,7 +10,8 @@
         "^spreedly\\.json$"
       ],
       "matchStrings": [
-        "\"version\":\\s*\"(?<currentValue>.*?)\""
+        "\"version\":\\s*\"(?<currentValue>.*?)\"",
+        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\""
       ],
       "depNameTemplate": "curl",
       "datasourceTemplate": "custom.curl"
