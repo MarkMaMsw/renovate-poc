@@ -11,7 +11,8 @@
       ],
       "matchStrings": [
         "\"version\":\\s*\"(?<currentValue>.*?)\"",
-        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\""
+        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\"",
+        "\"sri\":\\s*\"(?<currentDigest>.*?)\""
       ],
       "depNameTemplate": "curl",
       "datasourceTemplate": "custom.curl"
