@@ -18,7 +18,7 @@
   ],
   "customDatasources": {
     "curl": {
-      "defaultRegistryUrlTemplate": "https://curl.se/download.html",
+      "defaultRegistryUrlTemplate": "https://developer.spreedly.com/docs/iframe-integrity-hashes#iframe-active-versions",
       "format": "html"
     }
   },
@@ -27,7 +27,7 @@
       "matchDatasources": [
         "custom.curl"
       ],
-      "extractVersion": "/curl-(?<version>.+)\\.tar\\.gz$"
+      "extractVersion": "/iframe-(?<version>\\d+.\\d+)\\.min\\.js$"
     }
   ]
 }
