@@ -15,6 +15,16 @@
       ],
       "depNameTemplate": "spreedly-iframe",
       "datasourceTemplate": "custom.spreedly-iframe"
+    },
+    {
+      "managerFilePatterns": [
+        "/\\.html?$/"
+      ],
+      "versioning": "semver",
+      "digest": {
+        "enabled": false
+      },
+      "pinDigests": false
     }
   ],
   "customDatasources": {
