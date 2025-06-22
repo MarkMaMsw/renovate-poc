@@ -18,11 +18,10 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^spreedly\\.json$"
+        "^index\\.html$"
       ],
       "matchStrings": [
-        "\"version\":\\s*\"(?<currentValue>.*?)\"",
-        "\"iframeScriptUrl\":\\s*\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\""
+        "<script src=\"https://core\\.spreedly\\.com/iframe/iframe-(?<currentValue>.*?)\\.min\\.js\""
       ],
       "depNameTemplate": "spreedly-iframe",
       "datasourceTemplate": "custom.spreedly-iframe"
